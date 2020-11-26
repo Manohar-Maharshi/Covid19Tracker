@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+			crossorigin="anonymous"
+		/>
+		<title>Covid-19 Tracker</title>
+	</head>
+	<body>
+		<div class="container">
+			<p class="h3 text-center">Covid-19 Tracker</p>
+			<div class="row justify-content-center mt-4">
+				<div class="col-3">
+					<div class="card">
+						<div class="card-body">
+							<div class="row text-center">
+								<div class="col">
+									<img
+										width="50px"
+										height="50px"
+										src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgaWQ9IkNvcm9uYV9WaXJ1c19TeW1wdG9tc19Db3VnaCIgZGF0YS1uYW1lPSJDb3JvbmEgVmlydXMgU3ltcHRvbXMgQ291Z2giPjxnIGlkPSJHbHlwaCI+PHBhdGggZD0ibTE1MS45ODggMjcyaC0xNS45ODhhOCA4IDAgMCAxIDAtMTZoMTUuOTg4YTggOCAwIDAgMSAwIDE2eiIvPjxwYXRoIGQ9Im0xODMuOTg4IDM0NGE4IDggMCAwIDEgLTgtOHYtMTZhOCA4IDAgMCAxIDE2IDB2MTZhOCA4IDAgMCAxIC04IDh6Ii8+PHBhdGggZD0ibTE0My45ODggMzIwYTggOCAwIDAgMSAtNS42NTctMTMuNjU3bDE2LTE2YTggOCAwIDAgMSAxMS4zMTUgMTEuMzE0bC0xNiAxNmE3Ljk3OCA3Ljk3OCAwIDAgMSAtNS42NTggMi4zNDN6Ii8+PHBhdGggZD0ibTcyIDQ1Ni45MTF2NTUuMDg5aDc2LjE5M2MtMS4xMi0xMy43MjEtMi40NjItMzEuMjI5LTMuOTktNTMuNjY3IDI5LjY1Ny00MS42MiAyMi44NS04Mi42MDkgMjMuOC05MC4zMzNhMjQgMjQgMCAwIDAgLTQ4IDB2MTguMDUzYzAgNi43LTkuNDYyIDguMjYzLTExLjU4OSAxLjg4MWwtMTIuMDg4LTM2LjI1NCA5LjYxMy0zOC40NTZjNi43NC0yNi45NDgtMjguMjQyLTQxLjg2NS0zMy40MjktMjguMDMzLTI0Ljc0OSA2Ny4zMjMtMjUuMjc4IDY0LjM5Mi0yNC4zMDUgNjguNjA5eiIvPjxwYXRoIGQ9Im0zOTMuMDE4IDMzMS4yYy0xNC40IDIwLjgtMTI5IDQ0LjgtMTUwLjk0NiA0MC41NDYtMjAuMTMgMzIuMTQxLTQ0LjMxNyA4My4yLTQxLjg4NCAxNDAuMjU0aDg3Ljgzdi03MS4xNWMwLTMwLjczMSAyNC40LTU2LjM3NSA1NS4xMzItNTYuODQzYTU2LjA2MSA1Ni4wNjEgMCAwIDEgNTYuODY4IDU1Ljk5M3Y3Mmg0Ny44MTFsLjE4OS0yOC43NTdjLjg4OS00OC4zMDctMTYtMTA3LjI0My01NS0xNTIuMDQzeiIvPjxwYXRoIGQ9Im00NTMuOTg2IDY0LjA3OWMtOS4xNDUtMTkuNy0yMy44ODYtMzEuNjI3LTQxLjg1Ny0zNC4wMzEtNDUuNjIzLTg1LjY2OS0yMzQuMDM0IDQzLjkzMy0yNjAuNzc1LTMuMS0zLjM2MS03LjIyOC0xNC41MS01LjQyNi0xNS4xMTYgMy4wNTEtMi42MjIgMzYuNjk0IDguMDExIDg1LjU2OCAzOS43NTIgMTA4LjExNnY0OS43MTFjLTIzLjAyMSAzMC45OC0yNi45ODUgMzEuNDU1LTI1Ljg3MiAzNy42IDEuMDg3IDYgNS43MTYgNS43MzEgMjcuMDg1IDE5Ljc5Mmw1LjA1NSAxNi44NDJhOCA4IDAgMCAwIDguOCA1LjYxOWMxNy41NzMtMi41MzMgMjAuMiAxLjc4NCAyMi45NDEgOC4zNzNsLTE3LjkzOSA4Ljk2MmE4IDggMCAwIDAgLTQuMDg2IDkuNDU3IDM4LjY3NSAzOC42NzUgMCAwIDAgMzYuNzkyIDI3LjRjNy43MjkgMCAxMC44ODktMS44NDQgMzUuMjItNy42MjRoLjAxNHYyNi4wMWMtMS45MzYgMi4zMjUtNS4xNDUgNi4zMTYtOS4xMjEgMTEuNzQ1IDY1LjctNS45MjIgMTE3Ljg4NS0zMi4wMjggMTM3LjEyMS00Mi44NzN2LTExLjc5NWMuMDg2LS4wNjYuMTQzLS4xMy4xNDMtLjE4OSAzMi43NDktNDIuMzMzIDU1LjQ4Mi04Ny43ODIgNjUuNzkzLTEzMS42MTUgOS4zNTctMzkuNzc0IDcuOTUzLTc1LjgwMy0zLjk1LTEwMS40NTF6Ii8+PC9nPjwvZz48L3N2Zz4="
+									/>
+									<h5>Cases</h5>
+									<p class="h2">
+										<span id="total-cases-count"></span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="card">
+						<div class="card-body">
+							<div class="row text-center">
+								<div class="col">
+									<img
+										width="50px"
+										height="50px"
+										src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiPgo8Zz4KCTxwYXRoIGQ9Ik00MDYsMTUxYzI1LjIzOSwwLDQ1LTI2LjM1Myw0NS02MHMtMTkuNzYxLTYwLTQ1LTYwcy00NSwyNi4zNTMtNDUsNjBTMzgwLjc2MSwxNTEsNDA2LDE1MXoiLz4KCTxwYXRoIGQ9Ik0yODYsOTBjMjQuODE0LDAsNDUtMjAuMTg2LDQ1LTQ1UzMxMC44MTQsMCwyODYsMHMtNDUsMjAuMTg2LTQ1LDQ1UzI2MS4xODYsOTAsMjg2LDkweiIvPgoJPHBhdGggZD0iTTE4MC4yOTcsMTIxYzI0LjgxNCwwLDQ1LTIwLjE4Niw0NS00NXMtMjAuMTg2LTQ1LTQ1LTQ1cy00NSwyMC4xODYtNDUsNDVTMTU1LjQ4MiwxMjEsMTgwLjI5NywxMjF6Ii8+Cgk8cGF0aCBkPSJNMTA2LDEyMWMtMjQuODE0LDAtNDUsMjAuMTg2LTQ1LDQ1czIwLjE4Niw0NSw0NSw0NXM0NS0yMC4xODYsNDUtNDVTMTMwLjgxNCwxMjEsMTA2LDEyMXoiLz4KCTxwYXRoIGQ9Ik0zMDEsMjI2djE1MGgxNTBWMjI2bC03NS02MEwzMDEsMjI2eiBNNDA2LDMzMWgtNjB2LTMwaDYwVjMzMXogTTQwNiwyNzFoLTYwdi0zMGg2MFYyNzF6Ii8+Cgk8cGF0aCBkPSJNMjcxLDQwNlYyMTEuNTg2bDg0LjU5NS02Ny42N0MzMzYuMTk4LDEzMC44MDUsMzE1LjYzNCwxMjEsMjg2LDEyMWMtMzUuMjczLDAtNjguNTk5LDEwLjQzLTkzLjg1MywyOS4zNyAgIEMxNjUuNjE5LDE3MC4yNjMsMTUxLDE5Ny4xMTMsMTUxLDIyNmMwLDM3LjM2OCwxNS45ODEsNzEuMTkxLDMxLjQzNiwxMDMuOTAxQzE5Ny4xMjgsMzYxLDIxMSwzOTEuMzU1LDIxMSw0MjIgICBjMCwyNC4wNTMsOS4zNiw0Ni42NTUsMjYuMzY3LDYzLjYzM0MyNTQuMzQ1LDUwMi42NCwyNzYuOTQ3LDUxMiwzMDEsNTEyczQ2LjY1NS05LjM2LDYzLjYzMy0yNi4zNjcgICBDMzgxLjY0LDQ2OC42NTUsMzkxLDQ0Ni4wNTMsMzkxLDQyMmMwLTQuOS0wLjQ4LTEwLjkyMS0xLjI0OS0xNkgyNzF6Ii8+CjwvZz4KCgoKCgoKCgoKCgoKCgoKPC9zdmc+Cg=="
+									/>
+									<h5>Deaths</h5>
+									<p class="h2">
+										<span id="total-deaths-count"></span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="card">
+						<div class="card-body">
+							<div class="row text-center">
+								<div class="col">
+									<img
+										width="50px"
+										height="50px"
+										src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiPjx0aXRsZT5yZWNvdmVyZWQgaGVhcnQgcGF0aWVudCA8L3RpdGxlPjxwYXRoIGQ9Ik0yNTUuNjY3LDMxMi42NzgsMjQ1Ljg2LDI5MC42Yy0xMC4xNzUsNC44NjctMjIuMDI0LDcuMzM2LTM1LjM0MSw3LjMzNi0xMy42NjQsMC0yNS43ODctMi42NjQtMzYuMTQ2LTcuOTExTDE2My45OSwzMTIuNDA5YTYsNiwwLDAsMS0zLjU4NiwzLjE4MmMtMS4zNTYuNDQxLTIuNzQ4Ljg3Ny00LjE1NiwxLjMxMSwyLjk5LDE0Ljc2LDIwLjAzNSw0Mi4yMTksNTQuMjcxLDQyLjIxOSwyNS44MTMsMCw0My43NTYtMTYuMjUsNTEuNDY1LTMwLjQwN3ExLjM4OS01LjUyMywzLjMtMTAuODI4Yy0yLjE4LS42ODItNC4xNy0xLjMyNi02LjA0NS0xLjk1OEE2LDYsMCwwLDEsMjU1LjY2NywzMTIuNjc4WiIvPjxwYXRoIGQ9Ik0xMjUuMzM4LDEyNy42OTRhMzIuNTQsMzIuNTQsMCwwLDAsMTYuNzU1LDE5LjMyNmMxMi4yNzcsNS43NzYsMjguOTcxLDMuOTcsNDkuNjE2LTUuMzY2LDI4LjgwNy0xMy4wMjgsNDQuNi0yNi45NTQsNTIuNzgyLTM2LjM0Miw4Ljc2NS0xMC4wNTksMTAuODUtMTcuMTU4LDEwLjg3LTE3LjIyOWE1Ljk2Myw1Ljk2MywwLDAsMSw4LjY3Ni0zLjY3OSw5MS4xNTgsOTEuMTU4LDAsMCwxLDI0LjE0NCwyMC4zNzUsNzAuODgyLDcwLjg4MiwwLDAsMC0xMi4zMTQtMjYuMzk0Yy0xNC4wNi0xOC41MzgtMzYuNTczLTI3LjkzOS02Ni45MTItMjcuOTM5LTMwLjExMSwwLTUzLjA0MSw4Ljg2OS02OC4xNTUsMjYuMzU5LTE0LjQsMTYuNjU5LTE3LjcsMzYuOTMzLTE2LjQsNDUuOC4xNjMsMS4xMDguNDg2LDIuODYyLjkyNSw1LjA0N0MxMjUuMzI4LDEyNy42NjUsMTI1LjMzNCwxMjcuNjc5LDEyNS4zMzgsMTI3LjY5NFoiLz48cGF0aCBkPSJNMjc1Ljk3OCwyMjEuMjUxYTUuODgsNS44OCwwLDAsMSwzLjMwOC0uOTIxbC4xODUsMGM5Ljk1NSwwLDIxLjU0Ny0xNC45MTMsMjUuOTE2LTMzLjQsMS41NTQtNi42LS42LTExLjU4OS0zLjUzNy0xMy4xLTMtMS41NDUtNS45NTIsMS4wNzItNy40NDMsMi43NzFhNiw2LDAsMCwxLTkuNTQxLTcuMjI3YzEuNDYzLTMuNDY4LDMuMTExLTE4LjgzMyw0LjE2OC0zMS43MzItLjA2MS0xOC42MzEtMTYuMzU5LTMyLjc4Ny0yNS4yMTMtMzkuMS02LjA3MywxMS40MDYtMjIuOTc1LDM0LjA2My02Ny4xNjcsNTQuMDQ5LTE0LjMyOCw2LjQ3OS0yNy4yNTksOS43MjQtMzguNjczLDkuNzI0YTQ4LjY1NCw0OC42NTQsMCwwLDEtMjEuMjE1LTQuNTM4LDQyLjI5MSw0Mi4yOTEsMCwwLDEtNS4xNzMtMi45MzdjMS43NzcsNi44ODgsMy40NDcsMTIuNTg1LDQuNDI4LDE0LjMwOWE2LDYsMCwwLDEtOS4yMzQsNy42MTljLTIuNjYtMi44LTUuNTE0LTMuNjkzLTcuODI1LTIuNDQ1LTIuNjg2LDEuNDUyLTQuODY4LDYuMDE4LTMuMzEyLDEyLjYxMyw0LjM2OCwxOC40ODUsMTUuOTYxLDMzLjQsMjUuOTE3LDMzLjQuMSwwLC4yLDAsLjMsMGE1Ljk4NSw1Ljk4NSwwLDAsMSw2LDUuNzg3Yy40LDUuODE5LDMuNjA4LDM1LjYxMywyNy42NDQsNTAuNzg3LDkuNDg2LDUuOTk0LDIxLjI2NCw5LjAzMywzNS4wMDksOS4wMzMsMTMuNzg4LDAsMjUuNTkzLTIuOTcyLDM1LjA4Ni04LjgzNCwyNC40ODMtMTUuMTM1LDI3LjI1OS00NS4wNzIsMjcuNTY2LTUwLjkxOUE2LDYsMCwwLDEsMjc1Ljk3OCwyMjEuMjUxWiIvPjxwYXRoIGQ9Ik0yNTguNDYsMzU3LjIyNmMwLTEuNy4wNDUtMy40LjExNy01LjA4NmE3MC4wNzEsNzAuMDcxLDAsMCwxLTQ4LjA1OCwxOC45ODFjLTM4Ljc4OCwwLTYxLjE5MS0yOS44MTctNjUuODM1LTUwLjgyOHEtNC42NDUsMS4zMDktOS41MTQsMi42NDhDMTExLjgzOCwzMjkuMzkyLDg1LjM5NCwzMzYuNyw2NS4xMjMsMzQ4LjksNDIuODM0LDM2Mi4zMTIsMzIsMzc5LjUxMSwzMiw0MDEuNDc5djQzLjJDMzIsNDUxLjE1NCw0NC4wMjQsNDYyLDUxLjIsNDYySDMyMy41NzlBMTE3LjAxNCwxMTcuMDE0LDAsMCwxLDI1OC40NiwzNTcuMjI2WiIvPjxwYXRoIGQ9Ik00MDQuNjc5LDMwNS45MzFhMjMuMzYyLDIzLjM2MiwwLDAsMC0yMy4zMzksMjMuMzMyLDYsNiwwLDAsMS0xMiwwQTIzLjM3NCwyMy4zNzQsMCwwLDAsMzQ2LDMwNS45MDdjLTMuOSwwLTIzLjMzOCwxLjQtMjMuMzM4LDI4LjkxNywwLDMyLjU0NSw0MC42OTEsNjMuOSw1Mi42NjYsNzIuNDI3LDExLjk2OS04LjU2Myw1Mi42ODctNDAuMDgsNTIuNjg3LTcyLjQzM0M0MjguMDE3LDMyMy42NDksNDIxLjY4MSwzMDUuOTMxLDQwNC42NzksMzA1LjkzMVoiLz48cGF0aCBkPSJNMzc1LjM0MiwyNTIuMzQzQTEwNC44OCwxMDQuODgsMCwwLDAsMzcwLjcsNDYySDM3NGE2LjA1Miw2LjA1MiwwLDAsMSwxLjEuMTA1Yy4wOCwwLC4xNiwwLC4yNDEsMGExMDQuODgzLDEwNC44ODMsMCwxLDAsMC0yMDkuNzY1Wm0zMy41OSwxNDIuMTMxYTIwNi45ODYsMjA2Ljk4NiwwLDAsMS0zMC4zMTcsMjUuMSw2LDYsMCwwLDEtNi41MzUuMDEsMjA0Ljg0NiwyMDQuODQ2LDAsMCwxLTMwLjMyNy0yNS4wMDdjLTIwLjYyOS0yMC42ODktMzEuMDg5LTQwLjc5My0zMS4wODktNTkuNzUsMC0xMC4yMjcsMi43MzYtMTkuOCw3LjctMjYuOTU1LDYuMzQyLTkuMTM0LDE1LjktMTMuOTYyLDI3LjYzNC0xMy45NjJhMzUuMzI2LDM1LjMyNiwwLDAsMSwyOS4zNDIsMTUuNjczLDM1LjMzNSwzNS4zMzUsMCwwLDEsMjkuMzM1LTE1LjY0OWMyMi45NTMsMCwzNS4zMzgsMjEuMDY2LDM1LjMzOCw0MC44ODdDNDQwLjAxNywzNTMuNjcsNDI5LjU1OSwzNzMuNzQxLDQwOC45MzIsMzk0LjQ3NFoiLz48L3N2Zz4K"
+									/>
+									<h5>Recovered</h5>
+									<p class="h2">
+										<span id="total-recovered-count"></span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-4">
+				<div class="col">
+					<table
+						id="table"
+						class="table table-hover table-bordered text-center"
+					>
+						<thead>
+							<tr>
+								<th>Country</th>
+								<th>Total Cases</th>
+								<th>Total Deaths</th>
+								<th>Recovered</th>
+								<th>Today Cases</th>
+								<th>Today Deaths</th>
+								<th>Active</th>
+								<th>Critical</th>
+								<th>Total Tests</th>
+							</tr>
+						</thead>
+						<tbody id="dataList"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+			integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
